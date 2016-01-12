@@ -1,0 +1,14 @@
+{
+  "name": "immutable-obj",
+  "version": "1.1.2",
+  "description": "immutable-obj",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "wizardpisces",
+  "license": "MIT"
+}
