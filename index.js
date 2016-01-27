@@ -1,5 +1,7 @@
 
 var update= function(obj,path,value){
+	
+	if(typeof path === 'string') path = path.split('.');//scope string args
 
 	var func = function(obj,path){
 
@@ -29,21 +31,3 @@ var update= function(obj,path,value){
 }
 
 module.exports = update;
-
-/*
-	examples
-*/
-
-// var a = {b:{}, c:{'x':1,y:[1,2,3,4]}, d :[1,2,3] , e:{a:{a:{}}}};
-
-// var b = update(a, ['c',1,2], 2);
-
-// console.log('a',a,'\n' ,'b',b,'\n', a.b == b.b , b.c == b.c,typeof b.c[1][1] == 'undefined' );
-
-// var b = update(a, ['c','d'], 2);
-
-// console.log('a',a,'\n' ,'b',b,'\n', a.b == b.b ,a.c.y == b.c.y);
-
-// var b = update(a, ['province','address','name'], 'liu');
-
-// console.log('a',a,'\n' ,'b',b,'\n', a.b == b.b ,a.c.y == b.c.y);
